@@ -2,8 +2,11 @@
 //Inheritance class activity
 
 #include <iostream>
+#include <string>
 #include "shelter.h"
 #include "animal.h"
+
+void addAnimal();
 
 int main(){
 	
@@ -19,7 +22,7 @@ int main(){
 	while (choice>1 || choice<4){	
 	switch(choice){
 		case 1: 
-			addAnimal(Animal* animal);
+			addAnimal();
 			break;	
 		case 2:
 			removeAnimal(std::string name);
@@ -42,3 +45,16 @@ int main(){
 
 	return 0;
 }
+
+void addAnimal(){
+	std::string name= ""; 
+	std::cout << "Enter name of animal: ";
+	std::cin >> name;
+	std::cout << std::endl;
+
+
+	addAnimal(Animal* animal);
+}
+
+
+
