@@ -5,11 +5,14 @@
 #include <string>
 #include "shelter.h"
 #include "animal.h"
+#include "dog.h"
+#include "cat.h"
 
-void addAnimal();
 
 int main(){
 	
+	Shelter shelter;
+
 	int choice=0;
 	std::cout << "Welcome to the shelter!" << std::endl;
 	std::cout << "1) Add a dog or cat" << std::endl;
@@ -22,12 +25,14 @@ int main(){
 	while (choice>1 || choice<4){	
 	switch(choice){
 		case 1: 
-			addAnimal();
+			addAnimal(shelter);
 			break;	
 		case 2:
-			removeAnimal(std::string name);
+			shelter.removeAnimal("Test");
+			break;
 		case 3:
-			displayAnimals();
+			shelter.displayAnimals();
+			break;
 		case 4:
 			break;
 		default: 	
@@ -46,14 +51,16 @@ int main(){
 	return 0;
 }
 
-void addAnimal(){
+void addAnimal(Shelter shelter){
+	
 	std::string name= ""; 
+	int age=0;
+	std::string breed= "";
 	std::cout << "Enter name of animal: ";
 	std::cin >> name;
 	std::cout << std::endl;
 
-
-	addAnimal(Animal* animal);
+	shelter.addAnimal(&Animal(name, age, breed));
 }
 
 
