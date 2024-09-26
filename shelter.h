@@ -12,9 +12,7 @@
 #include <string>
 
 #include "animal.h"
-//Are these necessary?
-#include "dog.h"
-#include "cat.h"
+
 
 class Shelter {
 	public:
