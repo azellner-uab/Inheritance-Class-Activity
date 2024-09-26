@@ -1,19 +1,32 @@
-client: main.o shelter.o animal.o
-	g++ main.o shelter.o animal.o -o client
-	
-main.o: main.cpp shelter.h animal.h cat.h dog.h
-	g++ -c main.cpp
-	
-shelter.o: shelter.cpp shelter.h animal.h cat.h dog.h
-	g++ -c shelter.cpp
-	
-animal.o: animal.cpp cat.cpp dog.cpp animal.h cat.h dog.h
-	g++ -c animal.cpp
-	g++ -c dog.cpp
-	g++ -c cat.cpp
-	
-run: client
-	./client
-	
+# Compiler
+CXX = g++
+
+# Compiler flags
+CXXFLAGS = -Wall -std=c++11
+
+# Target executable
+TARGET = animal_program
+
+# Source files
+SRC = main.cpp animal.cpp dog.cpp cat.cpp
+
+# Object files
+OBJ = $(SRC:.cpp=.o)
+
+# Default rule to build the target executable
+all: $(TARGET)
+
+# Rule to link object files and create the executable
+$(TARGET): $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJ)
+
+# Rule to compile source files into object files
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $<
+
+# Clean up object files and executable
 clean:
-	rm -f *.o client
+	rm -f $(OBJ) $(TARGET)
+
+# Phony targets (not actual files)
+.PHONY: all clean
