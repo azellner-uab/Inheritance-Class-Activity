@@ -38,7 +38,7 @@ int main(){
 		default: 	
 			std::cout << "Please enter a valid input (1-4)" << std::endl;
 	}
-	std::cout << "Welcome to the shelter!" << std::endl;
+	std::cout << "\nWelcome to the shelter!" << std::endl;
 	std::cout << "1) Add a dog or cat" << std::endl;
 	std::cout << "2) Remove animal by name" << std::endl;
 	std::cout << "3) Display all animals" << std::endl;
@@ -56,8 +56,17 @@ void addAnimal(Shelter shelter){
 	std::string name= ""; 
 	int age=0;
 	std::string breed= "";
+
+	std::cout << "ADD NEW ANIMAL\n";
+	std::cout << "---------------------\n";
 	std::cout << "Enter name of animal: ";
 	std::cin >> name;
+	std::cout << std::endl;
+	std::cout << "Enter age (int): ";
+	std::cin >> age;
+	std::cout << std::endl;
+	std::cout << "Enter breed ('Dog' or 'Cat'): ";
+	std::cin >> breed;
 	std::cout << std::endl;
 
 	shelter.addAnimal(&Animal(name, age, breed));
