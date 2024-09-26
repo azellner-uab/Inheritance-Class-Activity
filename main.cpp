@@ -21,7 +21,7 @@ int main(){
 	std::cout << "Enter your choice (1-4): ";
 	std::cin >> choice;
 	std::cout << std::endl;
-	while (choice>1 || choice<4){	
+	while (choice !=4){	
 	switch(choice){
 		case 1: 
 			addAnimal(shelter);
@@ -69,6 +69,8 @@ void addAnimal(Shelter shelter){
 	std::cout << std::endl;
 
 	Animal a(name, age, breed);
+	a.displayInfo();
+
 	shelter.addAnimal(&a);
 }
 
