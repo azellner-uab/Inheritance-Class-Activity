@@ -1,0 +1,12 @@
+Anastasia Zellner
+Nandan Patil
+Colton Criswell
+1. The code did not run as expected.
+2. a) yes, the code follows specs.
+  b) there were some logic errors.
+  c) the code was overall written pretty well.
+3. The code did not run as expected.
+4. a) yes, the code follows specs. We consolidated animal, cat, and dog into a single .h and .cpp file.
+  b) there were some syntax errors in shelter.cpp and main.cpp
+  c) the code was overall written pretty well.
+5. The code did not run as expected.
