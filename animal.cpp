@@ -1,4 +1,4 @@
-#include "Animal.h"
+#include "animal.h"
 
 // Constructor implementation
 Animal::Animal(const std::string& name, int age, const std::string& type)

@@ -5,8 +5,6 @@
 #include <string>
 #include "shelter.h"
 #include "animal.h"
-#include "dog.h"
-#include "cat.h"
 
 void addAnimal(Shelter shelter);
 
