@@ -5,12 +5,12 @@
 #include <string>
 #include "shelter.h"
 #include "animal.h"
-
+std::vector<Animal> animals;
 void addAnimal(Shelter shelter);
 
 int main(){
-	
 	Shelter shelter;
+	
 
 	int choice=0;
 	std::cout << "Welcome to the shelter!" << std::endl;
@@ -69,9 +69,10 @@ void addAnimal(Shelter shelter){
 	std::cout << std::endl;
 
 	Animal a(name, age, breed);
+	animals.push_back(a);
 	a.displayInfo();
 
-	shelter.addAnimal(&a);
+	shelter.addAnimal(&(animals[animals.size() - 1]);
 }
 
 
