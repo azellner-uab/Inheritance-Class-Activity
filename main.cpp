@@ -8,6 +8,7 @@
 #include "dog.h"
 #include "cat.h"
 
+void addAnimal(Shelter shelter);
 
 int main(){
 	
@@ -69,7 +70,8 @@ void addAnimal(Shelter shelter){
 	std::cin >> breed;
 	std::cout << std::endl;
 
-	shelter.addAnimal(&Animal(name, age, breed));
+	Animal a(name, age, breed);
+	shelter.addAnimal(&a);
 }
 
 
