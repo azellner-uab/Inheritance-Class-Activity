@@ -12,9 +12,7 @@
 #include <string>
 
 #include "animal.h"
-//Are these necessary?
-#include "dog.h"
-#include "cat.h"
+
 
 class Shelter {
 	public:
@@ -27,7 +25,7 @@ class Shelter {
 	 * the second constructor creates a Shelter with a vector of Animals to adopt.
 	 */
 		Shelter();
-		Shelter(vector<Animal*> animals);
+		Shelter(std::vector<Animal*> animals);
 	
 	/*
 	 * Method: addAnimal
@@ -55,6 +53,6 @@ class Shelter {
 	
 	private:
 	std::vector<Animal*> animals; /* The list of animals at the shelter */
-}
+};
 
 #endif

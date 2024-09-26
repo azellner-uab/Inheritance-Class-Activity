@@ -23,7 +23,7 @@
 	 for (int i = 0; i < animals.size(); i++){
 		 Animal a = *(animals[i]);
 		 if (a.name == name){
-			 animals.erase(i);
+			 animals.erase(animals.begin() + i);
 			 std::cout << "Removed " << name << " from shelter list." << std::endl;
 			 return;
 		 }

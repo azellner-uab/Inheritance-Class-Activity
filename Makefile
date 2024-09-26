@@ -8,7 +8,7 @@ CXXFLAGS = -Wall -std=c++11
 TARGET = animal_program
 
 # Source files
-SRC = main.cpp animal.cpp dog.cpp cat.cpp
+SRC = main.cpp animal.cpp shelter.cpp
 
 # Object files
 OBJ = $(SRC:.cpp=.o)
