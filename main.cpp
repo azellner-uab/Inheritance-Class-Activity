@@ -72,7 +72,7 @@ void addAnimal(Shelter shelter){
 	animals.push_back(a);
 	a.displayInfo();
 
-	shelter.addAnimal(&(animals[animals.size() - 1]);
+	shelter.addAnimal(&(animals[animals.size() - 1]));
 }
 
 
