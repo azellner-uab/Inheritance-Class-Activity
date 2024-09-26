@@ -6,11 +6,11 @@
 
 class Animal {
 protected:
-    std::string name;
     int age;
     std::string type;
 
 public:
+    std::string name; 
     // Constructor
     Animal(const std::string& name, int age, const std::string& type);
 
