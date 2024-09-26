@@ -5,13 +5,12 @@
 #include <string>
 #include "shelter.h"
 #include "animal.h"
-#include "dog.h"
-#include "cat.h"
-
+std::vector<Animal> animals;
+void addAnimal(Shelter shelter);
 
 int main(){
-	
 	Shelter shelter;
+	
 
 	int choice=0;
 	std::cout << "Welcome to the shelter!" << std::endl;
@@ -22,7 +21,7 @@ int main(){
 	std::cout << "Enter your choice (1-4): ";
 	std::cin >> choice;
 	std::cout << std::endl;
-	while (choice>1 || choice<4){	
+	while (choice !=4){	
 	switch(choice){
 		case 1: 
 			addAnimal(shelter);
@@ -69,7 +68,11 @@ void addAnimal(Shelter shelter){
 	std::cin >> breed;
 	std::cout << std::endl;
 
-	shelter.addAnimal(&Animal(name, age, breed));
+	Animal a(name, age, breed);
+	animals.push_back(a);
+	a.displayInfo();
+
+	shelter.addAnimal(&(animals[animals.size() - 1]);
 }
 
 
