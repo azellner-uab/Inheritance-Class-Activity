@@ -24,4 +24,26 @@ public:
     virtual ~Animal() = default;
 };
 
+class Cat : public Animal {
+protected:
+    std::string breed;
+
+public:
+    // Constructor
+    Cat(const std::string& name, int age, const std::string& breed);
+
+    void displayInfo() const override;
+};
+
+class Dog : public Animal {
+protected:
+    std::string breed;
+
+public:
+    // Constructor
+    Dog(const std::string& name, int age, const std::string& breed);
+
+    void displayInfo() const override;
+};
+
 #endif // ANIMAL_H
